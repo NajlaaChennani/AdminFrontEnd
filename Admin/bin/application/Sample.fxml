@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="700.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <AnchorPane layoutX="217.0" prefHeight="430.0" prefWidth="490.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pnl_allag" layoutX="-2.0" prefHeight="487.0" prefWidth="620.0" style="-fx-background-color: #23CE6B;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="allagences" layoutX="10.0" prefHeight="254.0" prefWidth="474.0">
+                    <columns>
+                      <TableColumn fx:id="nomagence" prefWidth="98.0" text="Nom" />
+                      <TableColumn fx:id="adagence" prefWidth="374.0" text="Adresse" />
+                    </columns>
+                  </TableView>
+                   <Button fx:id="supp_ad" onAction="#deleteAgence" layoutX="283.0" layoutY="323.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" text="Supprimer l'agence" />
+                   <Button fx:id="modif_ad" onAction="#modifAgence" layoutX="283.0" layoutY="200.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" text="Modifier l'agence" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_allus" prefHeight="430.0" prefWidth="503.0" style="-fx-background-color: #272D2d;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="allagents" layoutX="8.0" prefHeight="272.0" prefWidth="474.0">
+                    <columns>
+                      <TableColumn fx:id="nameuser" prefWidth="97.0" text="Nom" />
+                      <TableColumn fx:id="username" prefWidth="84.0" text="Nom d'utilisateur" />
+                        <TableColumn fx:id="phone" prefWidth="85.0" text="N° de téléphone" />
+                        <TableColumn fx:id="aduser" prefWidth="150.0" text="Adresse" />
+                        <TableColumn fx:id="age" prefWidth="85.0" text="Age" />
+                        <TableColumn fx:id="soltel" prefWidth="85.0" text="Solde téléphonique" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="supp_us" onAction="#deleteAgent" layoutX="283.0" layoutY="323.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" text="Delete Agent" />
+               </children></Pane>
+            <Pane fx:id="pnl_addag" prefHeight="430.0" prefWidth="503.0" style="-fx-background-color: #0055b9;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="58.0" layoutY="98.0" text="Nom :" textFill="WHITE" />
+                  <Label layoutX="58.0" layoutY="159.0" text="Adresse :" textFill="WHITE" />
+                  <TextField fx:id="name" layoutX="148.0" layoutY="93.0" />
+                  <TextField fx:id="adresse" layoutX="148.0" layoutY="154.0" />
+                  <Button fx:id="ajou_ag" onAction="#ajoutagence" layoutX="148.0" layoutY="255.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Add agencie"/>
+               </children></Pane>
+            
+                              <Pane fx:id="pnl_addus" prefHeight="430.0" prefWidth="503.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="64.0" layoutY="54.0" text="Nom :" />
+                  <Label layoutX="51.0" layoutY="109.0" text="Nom d'utilisateur :" />
+                  <Label layoutX="52.0" layoutY="163.0" text="Mot de passe :" />
+                  <Label layoutX="57.0" layoutY="214.0" text="Adresse :" />
+                  <Label layoutX="62.0" layoutY="265.0" text="N° de téléphone :" />
+                  <Label layoutX="67.0" layoutY="316.0" text="Solde téléphonique :" />
+                  <Label layoutX="72.0" layoutY="367.0" text="Age :" />
+                  <TextField fx:id="us_nom" layoutX="158.0" layoutY="49.0" />
+                  <TextField fx:id="us_username" layoutX="158.0" layoutY="104.0" />
+                  <TextField fx:id="us_password" layoutX="158.0" layoutY="158.0" />
+                  <TextField fx:id="us_addr" layoutX="158.0" layoutY="209.0" />
+                  <TextField fx:id="us_phone" layoutX="158.0" layoutY="260.0" />
+                  <TextField fx:id="us_soldetel" layoutX="158.0" layoutY="311.0" />
+                  <TextField fx:id="us_age" layoutX="158.0" layoutY="362.0" />
+                  <Button fx:id="ajou_us" onAction="#ajoutagent" layoutX="158.0" layoutY="400.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Ajouter un agent banquaire" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane layoutY="1.0" prefHeight="430.0" prefWidth="209.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="474.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="430.0" prefWidth="45.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="btn_allag" alignment="CENTER" graphicTextGap="35.0" layoutY="91.0" onAction="#handleButtonAction" prefHeight="49.0" prefWidth="226.0" ripplerFill="#1f86da" text="All Agencies" />
+            <JFXButton fx:id="btn_allus" alignment="CENTER" graphicTextGap="35.0" layoutY="140.0" onAction="#handleButtonAction" prefHeight="49.0" prefWidth="226.0" text="All Agents" />
+            <JFXButton fx:id="btn_addag" alignment="CENTER" graphicTextGap="35.0" layoutY="189.0" onAction="#handleButtonAction" prefHeight="49.0" prefWidth="226.0" text="Add Agencies" />
+            <JFXButton fx:id="btn_addus" alignment="CENTER" graphicTextGap="35.0" layoutY="238.0" onAction="#handleButtonAction" prefHeight="49.0" prefWidth="226.0" text="Add Agents" />
+           
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
