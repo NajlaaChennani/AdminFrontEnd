@@ -23,7 +23,6 @@
                     </columns>
                   </TableView>
                    <Button fx:id="supp_ad" onAction="#deleteAgence" layoutX="283.0" layoutY="323.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" text="Supprimer l'agence" />
-                   <Button fx:id="modif_ad" onAction="#modifAgence" layoutX="283.0" layoutY="200.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" text="Modifier l'agence" />
                </children>
             </Pane>
             <Pane fx:id="pnl_allus" prefHeight="430.0" prefWidth="503.0" style="-fx-background-color: #272D2d;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
